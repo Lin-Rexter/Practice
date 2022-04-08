@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8">
+    <title>Day5</title>
+    <link rel='icon' type='image/png' href='https://oddtaxi.jp/wp-content/themes/oddtaxi/images/assets/favicon.png'></link>
+    <meta name="description" content="隨便看看">
+    <meta name="author" content="Tooplate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0,shrink-to-fit=no,user-scalable=yes" />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta property="og:description" content="XXX">
+    <meta property="og:image" content="">
+    <meta property="og:title" content="">
+    <meta property='og:url' content="" />
+    <meta property='og:type' content='website' />
+    <meta property='og:site_name' content="網站" />
+    <meta name='twitter:image' content="" />
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:creator" content="">
+    <meta name='twitter:card' content='' />
+
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script src="../Javascript&Css/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <link href="../Javascript&Css/bootstrap.min.css" rel="stylesheet">
+    <link href="../Javascript&Css/headers.css" rel="stylesheet">
+    <link href="../Javascript&Css/sidebars.css" rel="stylesheet">
+    <script src="../Javascript&Css/sidebars.js"></script>
+
+
+    <meta name='robots' content='max-image-preview:large' />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+
+    <style>
+
+    </style>
+
+    <style media="screen and (max-width: 767px)">
+        .inner svg {
+            width: 60%;
+        }
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4RT6VREBBH"></script>
+
+
+    <meta property="fb:app_id" content="">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!最上層目錄>
+    <style>
+        .navbar {
+            display: inline-block;
+            width: 1200px;
+            height: auto;
+            background-color: #00ccff;
+            border-radius: 20px;
+            max-width: auto;
+        }
+        
+        .navbar a {
+            font-family: "Lato", "PingFang TC", "Helvetica Neue", Helvetica, "微軟正黑體", "新細明體", Arial, sans-serif;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-size: 18px;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 20px;
+        }
+        
+        .navbar a:hover {
+            border-radius: 20px;
+        }
+        
+        .over {
+            display: inline-flex;
+            color: rgb(255, 255, 0) !important;
+            background-color: #3484fc !important;
+        }
+        
+        .out {
+            display: inline-flex;
+            transition: color 0.55s ease-in-out, background-color 0.55s ease-in-out, border-color 0.55s ease-in-out;
+            border-radius: 3px;
+        }
+        
+        .down {
+            color: rgb(255, 255, 0) !important;
+            font-style: italic;
+        }
+        
+        .outer {
+            display: inline-flex;
+            background-color: #00ccff;
+            width: 50%;
+            border-radius: 20px;
+        }
+        
+        .outer a {
+            font-family: "Lato", "PingFang TC", "Helvetica Neue", Helvetica, "微軟正黑體", "新細明體", Arial, sans-serif;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            display: inline-flex;
+            font-size: 18px;
+            padding: 8px;
+            text-decoration: none;
+        }
+        
+        .outer a:hover {
+            display: inline-flex;
+            font-size: 18px;
+            border-radius: 3px;
+            padding: 8px;
+        }
+        
+        .a {
+            width: auto;
+            height: auto;
+            display: inline-flex;
+        }
+    </style>
+
+
+    <!置頂按鈕CSS&javaScipt>
+    <style>
+        #myBtn {
+            display: none;
+            width: 90px;
+            height: 90px;
+            border-radius: 55%;
+            overflow: hidden;
+            position: fixed;
+            overflow: hidden;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgb();
+            cursor: pointer;
+            border: 1px solid rgb(0, 153, 255);
+            text-align: center;
+            vertical-align: top;
+        }
+        
+        .tip {
+            font-size: 25px;
+            display: inline-block;
+        }
+        
+        .tip .tiptext {
+            font-family: "Helvetica, Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", "sans-serif";
+            font-weight: bold;
+            margin-left: 9px;
+            width: auto;
+            visibility: hidden;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            border-radius: 4px;
+            border: 1px solid #aeaeae;
+            position: fixed;
+            z-index: 1;
+            padding: 5px;
+            margin-top: none;
+            opacity: 0;
+            transition: opacity 0.7s;
+        }
+        
+        .tip:hover .tiptext {
+            bottom: 90px;
+            right: 85px;
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        aside {
+            width: 40%;
+            padding-left: .5rem;
+            margin-left: .5rem;
+            float: right;
+            box-shadow: inset 5px 0 5px -5px #29627e;
+            font-style: italic;
+            color: #29627e;
+        }
+        
+        aside>p {
+            margin: .5rem;
+        }
+        
+        p {
+            font-family: 'Fira Sans', sans-serif;
+        }
+        
+        .forecast {
+            margin: 0;
+            padding: .3rem;
+            background-color: #eee;
+            font: 1rem 'Fira Sans', sans-serif;
+        }
+        
+        .forecast>h1,
+        .day-forecast {
+            margin: .5rem;
+            padding: .3rem;
+            font-size: 1.2rem;
+        }
+        
+        .day-forecast {
+            background: right/contain content-box border-box no-repeat url('/media/examples/rain.svg') white;
+        }
+        
+        .day-forecast>h2,
+        .day-forecast>p {
+            margin: .2rem;
+            font-size: 1rem;
+        }
+        
+        .as {
+            display: flex;
+            width: 1200px;
+        }
+    </style>
+
+    <script>
+        window.onscroll = scrollFunction; //每當畫面捲動觸發一次
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        } //網頁捲動超過200pixel就會跑出來 display設定成block 跑回上面就隱藏。
+
+        // 重置scrollTop這個變數的值
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            window.scrollTo({
+                top: 1,
+                behavior: "smooth",
+            });
+        }
+    </script>
+
+</head>
+
+
+<body class="home blog" style="background-color:rgb(200, 227.5, 255)">
+    <div id="i1">
+        <header class="p-3 mb-3 border-bottom">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="../index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                        <img src="https://png.pngtree.com/png-vector/20190130/ourmid/pngtree-cartoon-cute-stick-figure-cat-head-cat-animal-expression-element-figurecatanimalcat-png-image_581617.jpg" alt="" width="36" height="36" class="me-2" viewBox="0 0 118 94">
+                        <span class="fs-4" style="color: rgb(30, 190, 125);font-weight: bold;">WWW</span>
+                    </a>
+                    <ul class="outer nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0  nav-pills ">
+                        <li class="nav-item"><a onMouseOver="this.className='over';" onMouseOut="this.className='out';" onMouseDown="this.className='down';" onMouseUp="this.className='over';" href="#" class="nav-link px-2 link-secondary">Overview</a></li>
+                        <li class="nav-item"><a onMouseOver="this.className='over';" onMouseOut="this.className='out';" onMouseDown="this.className='down';" onMouseUp="this.className='over';" href="#" class="nav-link px-2 link-dark">Inventory</a></li>
+                        <li class="nav-item"><a onMouseOver="this.className='over';" onMouseOut="this.className='out';" onMouseDown="this.className='down';" onMouseUp="this.className='over';" href="#" class="nav-link px-2 link-dark">Customers</a></li>
+                        <li class="nav-item"><a onMouseOver="this.className='over';" onMouseOut="this.className='out';" onMouseDown="this.className='down';" onMouseUp="this.className='over';" href="#" class="nav-link px-2 link-dark">Products</a></li>
+                    </ul>
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                    </form>
+
+                    <div class="dropdown text-end">
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="#">New project...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="as">
+            <main style="width:300px; height:auto;">
+                <div class="flex-shrink-0 p-3 bg-white" style="width: 260px;">
+                    <a href="../index.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                        <img src="https://png.pngtree.com/png-vector/20190130/ourmid/pngtree-cartoon-cute-stick-figure-cat-head-cat-animal-expression-element-figurecatanimalcat-png-image_581617.jpg" alt="" width="36" height="36" class="me-2" viewBox="0 0 118 94">
+                        <span class="fs-5 fw-semibold">Collapsible</span>
+                    </a>
+                    <ul class="list-unstyled ps-0">
+                        <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">Home
+                        </button>
+                            <div class="collapse show " id="home-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="..\Home\Overview.html" target="_top" class="btn-toggle-nav-color  link-dark rounded ">Overview</a></li>
+                                    <li><a href="..\Home\Updates.html" target="_top" class="link-dark rounded">Updates</a></li>
+                                    <li><a href="..\Home\Reports.html" target="_top" class="link-dark rounded">Reports</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">Dashboard
+                        </button>
+                            <div class="collapse" id="dashboard-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="..\Dashboard\Dashboard-Overview.html" target="_top" class="link-dark rounded">Overview</a></li>
+                                    <li><a href="..\Dashboard\Dashboard-Weekly.html" target="_top" class="link-dark rounded">Weekly</a></li>
+                                    <li><a href="..\Dashboard\Dashboard-Monthly.html" target="_top" class="link-dark rounded">Monthly</a></li>
+                                    <li><a href="..\Dashboard\Dashboard-Annually.html" target="_top" class="link-dark rounded">Annually</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">Orders
+                        </button>
+                            <div class="collapse" id="orders-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="..\Order\Order-New.html" target="_top" class="link-dark rounded">New</a></li>
+                                    <li><a href="..\Order\Order-Processed.html" target="_top" class="link-dark rounded">Processed</a></li>
+                                    <li><a href="..\Order\Order-Shipped.html" target="_top" class="link-dark rounded">Shipped</a></li>
+                                    <li><a href="..\Order\Order-Returned.html" target="_top" class="link-dark rounded">Returned</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="border-top my-3"></li>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">Account
+                        </button>
+                            <div class="collapse" id="account-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded">New...</a></li>
+                                    <li><a href="#" class="link-dark rounded">Profile</a></li>
+                                    <li><a href="#" class="link-dark rounded">Settings</a></li>
+                                    <li><a href="#" class="link-dark rounded">Sign out</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="b-example-divider"></div>
+            </main>
+
+            <div class="bb" style="height:300px; width:550px;">
+                <p>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="multiCollapseExample1">
+                            <div class="card card-body">
+                                Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="multiCollapseExample2">
+                            <div class="card card-body">
+                                Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#i1">第一章</a>
+            <a href="#i2">第二章</a>
+            <a href="#i3">第三章</a>
+            <a href="#i4">第四章</a>
+        </div>
+        <div id="i1" style="height:600px;">第一章的内容</div>
+        <div id="i2" style="height:600px;">第二章的内容</div>
+        <div id="i3" style="height:600px;">第三章的内容</div>
+        <div id="i4" style="height:600px;">第四章的内容</div>
+
+
+        <div class="tip">
+            <input type="image" id="myBtn" img src="https://www.svgrepo.com/show/286643/up.svg" onclick="topFunction()">
+            <span class="tiptext">置頂</span>
+        </div>
+
+
+
+</body>
+
+</html>
